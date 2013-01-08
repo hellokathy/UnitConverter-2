@@ -13,8 +13,8 @@ def main():
         "Welcome to our Python-powered Unit Converter v1.0 by iseijin!\n\n"
         "You can convert Distances , Weights , Volumes & Temperatures\n"
         "within units of the same category, which are shown below. E.g.: 1 mi in ft\n\n"
-        "    Distances: ft cm mm mi m yd km in\n"
-        "    Weights: lb mg kg oz g\n"
+        "    Lengths: ft cm mm mi m yd km in\n"
+        "    Masses: lb mg kg oz g\n"
         "    Volumes: flozUK flozUS qtUK qtUSdry qtUSliq cupSI cupUS galUK galUSdry galUSliq pintUK pintUSdry pintUSliq mL L\n"
         "    Temperatures: c f k"
     )
@@ -31,8 +31,7 @@ def main():
     temp_units = ['c', 'f', 'k']
     all_units = length_units + mass_units + vol_units + temp_units
     print(welcome_message)
-    test = unit_converter.converters.Length()
-    print("test shit: ", test.convert(10, 'km', 'mi'))
+
     while True: # Loop program
         while True: # Loop for input validation
             try:
