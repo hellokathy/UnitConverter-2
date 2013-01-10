@@ -16,11 +16,10 @@ appreciated.
 The program is run by executing one of the following.
 
     <user>$./UnitConverter"
-or 
+or  
     <user>$python3 UnitConverter.py
 
 Following the executing of the program users may enter conversions in the form:
-Amount Source_Unit in Destination_Unit
 
     Convert [AMT SOURCE_UNIT in DEST_UNIT, or (h)elp or (q)uit]:
     82.5 kg in lb
@@ -36,12 +35,10 @@ Amount Source_Unit in Destination_Unit
 
 ## Supported Units
 
-Length: inches, feet, yards, miles, millimetres, centimetres, metres and kilometres
-Mass: ounces, pounds, milligrams, grams, kilograms g
-Volume: fluid ounces[UK], fluid ounces[US], quarts[UK],  quarts[US, dry], 
-    quarts[US, liquid], cups[metric], cups[US], gallons[UK], gallons[US, dry],
-    gallons[US, liquid], pint[UK], pint[US, dry], pint[US, liquid], mL, L
-Temperature: celcius, fahrenheit, kelvin
+Length: inches, feet, yards, miles, millimetres, centimetres, metres and kilometres  
+Mass: ounces, pounds, milligrams, grams, kilograms g  
+Volume: fluid ounces[UK], fluid ounces[US], quarts[UK], quarts[US, dry], quarts[US, liquid], cups[metric], cups[US], gallons[UK], gallons[US, dry], gallons[US, liquid], pint[UK], pint[US, dry], pint[US, liquid], mL, L  
+Temperature: celcius, fahrenheit, kelvin  
 
 
 
