@@ -36,11 +36,11 @@ class Mass():
                         'g': 1,
                         'kg': 1000
                         }
-        def convert(self, amt, src, dest):
-            self.amount = amt
-            self.src_factor = self.factors[src]
-            self.dest_factor = self.factors[dest]
-            return self.amount * (self.src_factor/self.dest_factor)
+    def convert(self, amt, src, dest):
+        self.amount = amt
+        self.src_factor = self.factors[src]
+        self.dest_factor = self.factors[dest]
+        return self.amount * (self.src_factor/self.dest_factor)
 class Volume():
     def __init__(self):
         # Volume Factors (all in mL)
@@ -68,8 +68,7 @@ class Volume():
         return self.amount * (self.src_factor/self.dest_factor)
 
 class Temperature():
-    # Couldn't work out a nice way of doing temp conversion like with the factors so fuck the police.
-    # Temperature: c f k
+    # Couldn't work out a nice way of doing temperature conversion like with the factors so fuck the police.
     def __init__(self):
         self.amount = 0
         self.source = ''

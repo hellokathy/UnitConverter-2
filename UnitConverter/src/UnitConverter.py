@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.3
 '''
 Created on 09/01/2013
-
+@summary: A simple command line Unit Converter which allows conversions between basic unit.
 @author: iseijin
 '''
 
@@ -24,7 +24,7 @@ def main():
         "    Volumes: flozUK flozUS qtUK qtUSdry qtUSliq cupSI cupUS galUK galUSdry galUSliq pintUK pintUSdry pintUSliq mL L\n"
         "    Temperatures: c f k"
     )
-    # List of all units
+    # Lists of all units
     length_units = ['ft', 'cm', 'mm', 'mi', 'm', 'yd', 'km', 'in']
     mass_units = ['lb', 'mg', 'kg', 'oz', 'g']
     vol_units = ['flozUK', 'flozUS', 'qtUK', 'qtUSdry', 'qtUSliq', 'cupSI', 'cupUS', 'galUK', 'galUSdry', 'galUSliq', 'pintUK', 'pintUSdry', 'pintUSliq', 'mL', 'L']
@@ -39,7 +39,7 @@ def main():
                   'pintUSliq': "pint[US, liquid]", 'mL': "millilitres", 'L': "litres", 'c': "degrees Celcius", 'f': "degrees Fahrenheit", 'k': "degrees Kelvin"
                   }
     print(welcome_message)
-    while True: # Loop program
+    while True: # Loop program till exit
         while True: # Loop for input validation
             try:
                 usr_input = input("\nConvert [AMT SOURCE_UNIT in DEST_UNIT, or (h)elp or (q)uit]:\n")
