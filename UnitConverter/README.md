@@ -37,7 +37,7 @@ Following the executing of the program users may enter conversions in the form:
 
 **Length:** inches, feet, yards, miles, millimetres, centimetres, metres and kilometres
 
-**Mass:** ounces, pounds, milligrams, grams, kilograms g
+**Mass:** ounces, pounds, milligrams, grams, kilograms
 
 **Volume:** fluid ounces[UK], fluid ounces[US], quarts[UK], quarts[US, dry], quarts[US, liquid], cups[metric],
  cups[US], gallons[UK], gallons[US, dry], gallons[US, liquid], pint[UK], pint[US, dry], pint[US, liquid], mL, L
