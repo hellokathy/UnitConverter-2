@@ -3,7 +3,7 @@
 ## Description
 
 UnitConverter is a simple unit converstion utility. This program was made following
-the guidelines of a python project detailed on the [example](http://www-inst.eecs.berkeley.edu/~selfpace/cs9honline/P2a/ "University of California, Berkley")
+the guidelines of a python project detailed on the [University of California, Berkley](http://www-inst.eecs.berkeley.edu/~selfpace/cs9honline/P2a/ "Boo!")
 webpage.
 
 I have uploaded this to github for the learning experience. Any feedback would be much
