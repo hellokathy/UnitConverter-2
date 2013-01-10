@@ -1,7 +1,5 @@
 # UnitConverter
 
-## Description
-
 UnitConverter is a simple unit converstion utility. This program was made following
 the guidelines of a python project detailed on the [University of California, Berkley](http://www-inst.eecs.berkeley.edu/~selfpace/cs9honline/P2a/ "Boo!")
 webpage.
