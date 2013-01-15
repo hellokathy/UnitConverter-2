@@ -5,7 +5,7 @@ Created on 09/01/2013
 @author: iseijin
 '''
 
-import unit_converter.converters
+from unit_converter import converters, exceptions
 import sys
 
 def main():
@@ -56,28 +56,35 @@ def main():
                 if source_unit == dest_unit:
                     print("%0.2f %s = %0.4f %s. You are a little bit silly." % (amount, unit_names[source_unit], amount, unit_names[dest_unit]))
                 elif source_unit not in all_units or dest_unit not in all_units:
-                    raise Exception
+                    raise IndexError()
                 elif source_unit in length_units and dest_unit in length_units:
-                    conversion = unit_converter.converters.Length()
+                    conversion = converters.Length()
                     result = conversion.convert(amount, source_unit, dest_unit)
                     print("%0.2f %s = %0.4f %s." % (amount, unit_names[source_unit], result, unit_names[dest_unit]))
                 elif source_unit in mass_units and dest_unit in mass_units:
-                    conversion = unit_converter.converters.Mass()
+                    conversion = converters.Mass()
                     result = conversion.convert(amount, source_unit, dest_unit)
                     print("%0.2f %s = %0.4f %s." % (amount, unit_names[source_unit], result, unit_names[dest_unit]))
                 elif source_unit in vol_units and dest_unit in vol_units:
-                    conversion = unit_converter.converters.Volume()
+                    conversion = converters.Volume()
                     result = conversion.convert(amount, source_unit, dest_unit)
                     print("%0.2f %s = %0.4f %s." % (amount, unit_names[source_unit], result, unit_names[dest_unit]))
                 elif source_unit in temp_units and dest_unit in temp_units:
-                    conversion = unit_converter.converters.Temperature()
+                    conversion = converters.Temperature()
                     result = conversion.convert(amount, source_unit, dest_unit)
                     print("%0.2f %s = %0.4f %s." % (amount, unit_names[source_unit], result, unit_names[dest_unit]))
                 else:
-                    print("Error: Units must be in the same category.")
+                    raise exceptions.CategoryError(''.join(unit_names[input_list[1]] + " & " + unit_names[input_list[-1]]))
                 break
-            except (ValueError, Exception):
-                print("Error: Wrong format.")
-    
+            except ValueError as e:
+                a = str(e).split(" ")
+                print("Error: Not a valid number: %s" % a[-1])
+            except IndexError:
+                print("Error: Not a valid unit(s): %s\nUse (h)elp to display supported units." % (''.join(input_list[1:])))
+            except exceptions.CategoryError as e:
+                print("Error: Units are not in the same category: %s" % str(e))
+            except:
+                print("Unexpected error:", sys.exc_info()[0])
+                raise
 if __name__ == '__main__':
     main()
