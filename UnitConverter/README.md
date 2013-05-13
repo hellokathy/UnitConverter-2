@@ -11,7 +11,7 @@ appreciated.
 
 The program is run by executing one of the following.
 
-    <user>$./UnitConverter"
+    <user>$./UnitConverter
 
 or  
 
